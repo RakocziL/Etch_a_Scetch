@@ -5,6 +5,7 @@ const buttonBlack =document.querySelector("#black");
 const buttonColorChange = document.querySelector("#colorChange");
 const buttonClear = document.querySelector("#clear");
 const colorPicker = document.querySelector("#colorPicker");
+const dancer = document.querySelector("#dance");
 
 //Addin event listeners
 slider.addEventListener("change", gridRange );
@@ -13,6 +14,7 @@ buttonColorChange.addEventListener("click", changeToColorChange);
 buttonClear.addEventListener("click", gridClear);
 colorPicker.addEventListener("change", changeColorPicker);
 colorPicker.addEventListener("click", changeColorPicker);
+dancer.addEventListener("click", danceDance);
 
 
 //test function
@@ -31,7 +33,6 @@ function createGrid(height){
         for(var j = 0; j < height;j++){
             const cell = document.createElement("div");
             cell.classList.add("grid-cell");
-            //Mouseover colorchange
             row.appendChild(cell);
         }
     }
@@ -64,7 +65,13 @@ function colorChanger(color){
             })
             }
     }
-
+    else if(color=="DANCE"){
+        for(var i = 0; i < cells.length;i++){
+            const cell = cells[i];
+            color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            cell.style.backgroundColor = color;
+            }
+         }
     else if(color=="white"){
         for(var i = 0; i < cells.length;i++){
             const cell = cells[i];
@@ -90,13 +97,16 @@ function colorChanger(color){
     function changeColorPicker(){
         colorChanger(colorPicker.value);
     }
+    function danceDance(){
+        colorChanger("DANCE");
+    }
     //Clear the whole grid
     function gridClear(){
         colorChanger("white");
     }
 
 
-
+//Epic grid generation
 gridRange()
 
 
