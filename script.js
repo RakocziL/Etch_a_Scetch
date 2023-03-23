@@ -45,8 +45,13 @@ function gridRange(e){
     createGrid(slider.value)
 }
 
+//Swap between colors
+function colorChanger(){
+    
+}
 
-gridRange();
+
+gridRange()
 
 
 

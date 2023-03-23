@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- File Links -->
+    <script src="jscolor.js"></script>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 
@@ -17,10 +18,14 @@
     <h1 class="test">Etch a Sketch</h1>
     
     <!-- Body -->
-    <div>
+    <div class="content">
         <div class = "buttons">
+            <button class="menuButtons">Black</button>
+            <button class="menuButtons">Color Change</button>
+            <button class="menuButtons">Dance Dance</button>
+            <button class="menuButtons">Clear</button>
+            <input data-jscolor="{}" value="#3399FF" class="menuButtons">
             <input type="range" min="16" max="96" value="16" step ="16" id="gridSlider">
-
         </div>
 
         <!-- Grid Square -->
