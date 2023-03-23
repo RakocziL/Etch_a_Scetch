@@ -7,6 +7,11 @@ h1{
     text-align: center;
     color:chocolate;
 }
+a{
+    text-decoration: none;
+    color:gray;
+}
+
 .footer{
     position: fixed;
     bottom:0;
